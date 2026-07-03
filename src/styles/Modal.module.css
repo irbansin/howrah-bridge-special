@@ -1,0 +1,262 @@
+.dialog {
+  border: 1px solid var(--border-color);
+  background-color: var(--surface-panel);
+  color: var(--text-primary);
+  border-radius: var(--border-radius-lg);
+  max-width: 580px;
+  width: 90%;
+  margin: auto;
+  padding: 0;
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  outline: none;
+}
+
+.dialog::backdrop {
+  background-color: rgba(7, 7, 10, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Modal Open Animation */
+.dialog[open] {
+  animation: scaleUp var(--transition-normal) forwards;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  background-color: #121217;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--border-radius-round);
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.closeBtn:hover {
+  background: var(--accent-red);
+  transform: scale(1.1);
+}
+
+.content {
+  padding: 24px;
+}
+
+.titleArea {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.titleArea h3 {
+  font-size: 1.5rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.price {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  color: var(--primary-gold);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.ratingRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--primary-gold);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.starIcon {
+  fill: var(--primary-gold);
+}
+
+.tag {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: var(--border-radius-sm);
+  font-family: var(--font-display);
+  font-weight: 500;
+}
+
+.description {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+/* Customizations */
+.customizationSection {
+  margin-bottom: 24px;
+  border-top: 1px solid var(--border-color);
+  padding-top: 20px;
+}
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+/* Spice Level Buttons */
+.spiceGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+}
+
+.spiceOption {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  border-radius: var(--border-radius-md);
+  padding: 10px;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+.spiceOption:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--border-color-hover);
+}
+
+.spiceOption.selected {
+  background: rgba(217, 119, 6, 0.1);
+  border-color: var(--primary-gold);
+  color: var(--primary-gold);
+}
+
+/* Extras Checkboxes */
+.extrasList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.extraItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  border-radius: var(--border-radius-md);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.extraItem:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--border-color-hover);
+}
+
+.checkboxContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary-gold);
+  cursor: pointer;
+}
+
+.extraName {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+.extraPrice {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  font-family: var(--font-serif);
+}
+
+/* Footer of modal */
+.modalFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--border-color);
+  padding-top: 20px;
+  margin-top: 24px;
+}
+
+.quantitySelector {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  background: rgba(255, 255, 255, 0.02);
+  overflow: hidden;
+}
+
+.qtyBtn {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.qtyBtn:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.qtyValue {
+  width: 40px;
+  text-align: center;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.submitBtn {
+  flex-grow: 1;
+  margin-left: 20px;
+  justify-content: center;
+}

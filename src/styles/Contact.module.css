@@ -1,0 +1,291 @@
+/* Contact Page & Contact Form Styles */
+
+.contactPage {
+  padding: 140px 0 100px 0;
+  min-height: 100vh;
+}
+
+.titleArea {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 60px auto;
+}
+
+.titleArea h1 {
+  font-size: 3rem;
+  font-family: var(--font-display);
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, #fff, var(--text-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.titleArea p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 48px;
+  align-items: start;
+}
+
+/* Info Panel side */
+.infoPanel {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.infoSection h2 {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.infoSection p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.hoursList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.hoursRow {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed var(--border-color);
+  padding-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.hoursRow span:first-child {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.hoursRow span:last-child {
+  color: var(--primary-gold);
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+
+.contactCards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  padding: 20px;
+  transition: all var(--transition-fast);
+}
+
+.card:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: var(--border-color-hover);
+}
+
+.iconBox {
+  width: 44px;
+  height: 44px;
+  background: rgba(217, 119, 6, 0.1);
+  border: 1px solid var(--primary-gold);
+  border-radius: var(--border-radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-gold);
+  flex-shrink: 0;
+}
+
+.cardDetails h3 {
+  font-size: 1.05rem;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.cardDetails p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Form Container */
+.formContainer {
+  padding: 40px;
+}
+
+.formContainer h2 {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.formSub {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 32px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+/* Custom FormGroup using :has() for premium container styling */
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px 20px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  transition: all var(--transition-fast);
+}
+
+.formLabel {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  transition: color var(--transition-fast);
+}
+
+.input, .textarea {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  outline: none;
+  width: 100%;
+}
+
+.textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* CSS :has() selectors for parent container adjustments */
+.formGroup:has(input:focus, textarea:focus) {
+  border-color: var(--primary-gold);
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 0 15px rgba(217, 119, 6, 0.12);
+}
+
+.formGroup:has(input:focus, textarea:focus) .formLabel {
+  color: var(--primary-gold);
+}
+
+.formGroup:has(input:user-invalid, textarea:user-invalid) {
+  border-color: var(--accent-red);
+}
+
+.formGroup:has(input:user-invalid, textarea:user-invalid) .formLabel {
+  color: var(--accent-red);
+}
+
+.errorText {
+  font-size: 0.75rem;
+  color: var(--accent-red);
+  margin-top: 4px;
+}
+
+.submitBtn {
+  justify-content: center;
+  align-self: flex-start;
+  padding: 14px 32px;
+}
+
+/* Success Card */
+.successCard {
+  text-align: center;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: scaleUp var(--transition-normal) forwards;
+}
+
+.successIcon {
+  width: 64px;
+  height: 64px;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid var(--secondary-mint);
+  border-radius: var(--border-radius-round);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--secondary-mint);
+  margin-bottom: 24px;
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.2);
+}
+
+.successCard h2 {
+  font-size: 1.8rem;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.successCard p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-size: 1rem;
+  max-width: 450px;
+  margin-bottom: 24px;
+}
+
+/* Responsive elements */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .formRow {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .contactPage {
+    padding: 100px 0 60px 0;
+  }
+  
+  .titleArea h1 {
+    font-size: 2.2rem;
+  }
+  
+  .infoPanel, .formContainer {
+    padding: 24px;
+  }
+}

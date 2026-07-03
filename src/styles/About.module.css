@@ -1,0 +1,245 @@
+/* About Page Layout Styles */
+
+.aboutPage {
+  padding: 140px 0 100px 0;
+  min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 60px auto;
+}
+
+.header h1 {
+  font-size: 3rem;
+  font-family: var(--font-display);
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, #fff, var(--text-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* History Column Grid */
+.storyGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.storyContent h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.storyContent p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.storyContent p:last-child {
+  margin-bottom: 0;
+}
+
+.storyContent span {
+  color: var(--primary-gold);
+  font-weight: 600;
+}
+
+.storyVisual {
+  position: relative;
+  height: 450px;
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.storyVisual img {
+  object-fit: cover;
+}
+
+/* Quote Panel */
+.quotePanel {
+  background: linear-gradient(135deg, rgba(217, 119, 6, 0.03) 0%, rgba(16, 185, 129, 0.02) 100%);
+  border: 1px dashed var(--border-color);
+  border-radius: var(--border-radius-md);
+  padding: 40px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 100px auto;
+}
+
+.quoteText {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #fff;
+  font-style: italic;
+  margin-bottom: 16px;
+}
+
+.quoteAuthor {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--primary-gold);
+}
+
+/* Philosophy Cards Grid */
+.philGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-bottom: 100px;
+}
+
+.philCard {
+  background: var(--surface-glass);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  padding: 32px;
+  transition: all var(--transition-fast);
+}
+
+.philCard:hover {
+  border-color: var(--border-color-hover);
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.philNumber {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-gold);
+  margin-bottom: 16px;
+  line-height: 1;
+}
+
+.philTitle {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.philText {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Chef Profiles */
+.teamSection h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.teamSubtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  max-width: 500px;
+  margin: 0 auto 50px auto;
+  font-size: 1rem;
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.teamCard {
+  background: var(--surface-glass);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  text-align: center;
+}
+
+.teamVisual {
+  position: relative;
+  height: 280px;
+  background-color: #1c1c24;
+}
+
+.teamInfo {
+  padding: 24px;
+}
+
+.teamName {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.teamRole {
+  font-size: 0.85rem;
+  color: var(--primary-gold);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-family: var(--font-display);
+  margin-bottom: 12px;
+  display: block;
+}
+
+.teamDesc {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+/* Responsive Rules */
+@media (max-width: 1024px) {
+  .storyGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .storyVisual {
+    height: 380px;
+    order: -1; /* Place image on top on tablet */
+  }
+  
+  .philGrid, .teamGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2.2rem;
+  }
+  
+  .storyContent h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .philGrid, .teamGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .storyVisual {
+    height: 260px;
+  }
+}

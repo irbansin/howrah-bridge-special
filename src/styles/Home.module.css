@@ -1,0 +1,359 @@
+/* Home Page Layout Styles */
+
+.hero {
+  position: relative;
+  min-height: 95vh;
+  display: flex;
+  align-items: center;
+  padding: 100px 0 80px 0;
+  overflow: hidden;
+  background-color: var(--bg-dark);
+}
+
+.heroBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.heroBackground img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.28; /* Moody overlay */
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 70% 30%, rgba(var(--bg-dark-rgb), 0.45) 0%, var(--bg-dark) 90%);
+  z-index: 2;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 10;
+  max-width: 650px;
+  animation: fadeInUp var(--transition-slow) forwards;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(217, 119, 6, 0.12);
+  border: 1px solid rgba(217, 119, 6, 0.3);
+  padding: 6px 16px;
+  border-radius: var(--border-radius-round);
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--primary-gold-light);
+  margin-bottom: 24px;
+}
+
+.heroTitle {
+  font-size: 4rem;
+  font-family: var(--font-display);
+  font-weight: 800;
+  line-height: 1.1;
+  color: #fff;
+  margin-bottom: 20px;
+  letter-spacing: -0.03em;
+}
+
+.heroTitle span {
+  color: var(--primary-gold);
+  background: linear-gradient(135deg, var(--primary-gold-light), var(--primary-gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.heroText {
+  color: var(--text-secondary);
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.heroActions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Page Sections */
+.section {
+  padding: 100px 0;
+  position: relative;
+}
+
+.sectionHeader {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 60px auto;
+}
+
+.sectionBadge {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--primary-gold);
+  margin-bottom: 12px;
+  display: block;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-family: var(--font-display);
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.sectionSubtitle {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Featured dishes grid */
+.featuredGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+/* Benefits Grid */
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.benefitCard {
+  background: var(--surface-glass);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  padding: 32px;
+  text-align: center;
+  transition: all var(--transition-fast);
+}
+
+.benefitCard:hover {
+  transform: translateY(-6px);
+  border-color: var(--border-color-hover);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.benefitIcon {
+  width: 56px;
+  height: 56px;
+  background: rgba(217, 119, 6, 0.1);
+  border-radius: var(--border-radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-gold);
+  margin: 0 auto 20px auto;
+  transition: all var(--transition-fast);
+}
+
+.benefitCard:hover .benefitIcon {
+  transform: scale(1.1);
+  background: var(--primary-gold);
+  color: #fff;
+  box-shadow: var(--shadow-gold-heavy);
+}
+
+.benefitTitle {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.benefitText {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Testimonials Carousel/Grid */
+.reviewsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.reviewCard {
+  background: var(--surface-glass);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.reviewCard::before {
+  content: "“";
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-size: 5rem;
+  font-family: var(--font-serif);
+  color: rgba(255,255,255,0.03);
+  line-height: 1;
+}
+
+.stars {
+  display: flex;
+  gap: 4px;
+  color: var(--primary-gold);
+  margin-bottom: 20px;
+}
+
+.reviewQuote {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  font-style: italic;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.reviewer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.reviewerAvatar {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--border-radius-round);
+  background: #272733;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-gold);
+  font-family: var(--font-display);
+  font-weight: 700;
+  border: 1px solid var(--border-color);
+}
+
+.reviewerInfo h4 {
+  font-size: 0.95rem;
+  color: #fff;
+}
+
+.reviewerInfo span {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* Call to Action Banner */
+.ctaBanner {
+  background: linear-gradient(135deg, #100e1a 0%, #1a162d 100%);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  padding: 60px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaBanner::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(217, 119, 6, 0.05) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.ctaTitle {
+  font-size: 2.8rem;
+  font-family: var(--font-display);
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.ctaText {
+  color: var(--text-secondary);
+  font-size: 1.15rem;
+  max-width: 500px;
+  margin: 0 auto 32px auto;
+  line-height: 1.6;
+}
+
+.ctaBtn {
+  position: relative;
+  z-index: 10;
+}
+
+/* Responsive Rules */
+@media (max-width: 1024px) {
+  .featuredGrid, .reviewsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .benefitsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 3rem;
+  }
+  
+  .heroText {
+    font-size: 1.1rem;
+  }
+  
+  .sectionTitle {
+    font-size: 2rem;
+  }
+  
+  .ctaTitle {
+    font-size: 2rem;
+  }
+  
+  .ctaBanner {
+    padding: 40px 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .featuredGrid, .reviewsGrid, .benefitsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .heroTitle {
+    font-size: 2.4rem;
+  }
+  
+  .heroActions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .heroActions button, .heroActions a {
+    justify-content: center;
+  }
+}
