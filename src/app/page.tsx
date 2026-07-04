@@ -14,7 +14,7 @@ export default function Home() {
 
   // Pick 3 featured items to display on the landing page
   const featuredItems = menuItems.filter((item) =>
-    ["egg-roll", "gt-burger", "sandesh-cheesecake"].includes(item.id)
+    ["chicken-chowmein", "crispy-chicken-lollipop", "alukatta"].includes(item.id)
   );
 
   const handleSelectItem = (item: MenuItem) => {
@@ -55,7 +55,7 @@ export default function Home() {
           </h1>
 
           <p className={styles.heroText}>
-            Experience a culinary bridge. Authentically layered Kolkata Kathi rolls and Tangra street wok noodles fused with gourmet spiced burgers and signature lime coolers.
+            Experience the vibrant street flavors of Kolkata. Savor authentic wok-tossed Chowmein, fragrant Fried Rice, sizzling hot Starters, and our legendary Sunday special Alukatta.
           </p>
 
           <div className={styles.heroActions}>
@@ -87,44 +87,44 @@ export default function Home() {
           {/* Benefit 1 */}
           <div className={styles.benefitCard}>
             <div className={styles.benefitIcon}>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5"></polygon></svg>
             </div>
-            <h3 className={styles.benefitTitle}>Hand-Rolled Parathas</h3>
+            <h3 className={styles.benefitTitle}>Tangra Wok Heritage</h3>
             <p className={styles.benefitText}>
-              Every Kathi roll uses layered parathas stretched and griddled on-site for flaky perfection.
+              Our noodles and fried rice are wok-tossed at high temperatures to capture the perfect wok-hei flavor.
             </p>
           </div>
 
           {/* Benefit 2 */}
           <div className={styles.benefitCard}>
             <div className={styles.benefitIcon}>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
             </div>
-            <h3 className={styles.benefitTitle}>Charcoal Tandoor</h3>
+            <h3 className={styles.benefitTitle}>Crispy Starters</h3>
             <p className={styles.benefitText}>
-              Succulent chicken tikka and paneer cubes are marinated overnight and charred in a clay oven.
+              Succulent chicken lollipops and coated cauliflower griddled and fried to maximum crispiness.
             </p>
           </div>
 
           {/* Benefit 3 */}
           <div className={styles.benefitCard}>
             <div className={styles.benefitIcon}>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5"></polygon></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
             </div>
-            <h3 className={styles.benefitTitle}>Tangra Wok Heritage</h3>
+            <h3 className={styles.benefitTitle}>Sunday Special</h3>
             <p className={styles.benefitText}>
-              Our street-style noodles are tossed at blistering temperatures in heavy carbon-steel woks.
+              A limited-time Sunday treat: the legendary Alukatta, crafted from secret ancestral spices.
             </p>
           </div>
 
           {/* Benefit 4 */}
           <div className={styles.benefitCard}>
             <div className={styles.benefitIcon}>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
             </div>
-            <h3 className={styles.benefitTitle}>Gondhoraj Zest</h3>
+            <h3 className={styles.benefitTitle}>Pure Street Spices</h3>
             <p className={styles.benefitText}>
-              We source fragrant, thick-skinned Gondhoraj limes straight from Bengal for our signature juices.
+              Fresh ginger, garlic, green chillies, and custom roasted ground spices blended in-house daily.
             </p>
           </div>
         </div>
@@ -168,7 +168,7 @@ export default function Home() {
               ))}
             </div>
             <p className={styles.reviewQuote}>
-              &quot;The chicken Kathi roll here is a revelation. Flaky paratha griddled beautifully, tandoori spices are spot-on. Tastes exactly like the iconic street spots in Gariahat, Kolkata!&quot;
+              &quot;The chicken Chowmein here is a revelation. Wok-tossed beautifully, Indo-Chinese spices are spot-on. Tastes exactly like the iconic street spots in Tangra, Kolkata!&quot;
             </p>
             <div className={styles.reviewer}>
               <div className={styles.reviewerAvatar}>AM</div>
@@ -187,7 +187,7 @@ export default function Home() {
               ))}
             </div>
             <p className={styles.reviewQuote}>
-              &quot;G.T. Road Lamb Burger is a masterpiece of spice blending. The garam-masala lamb patty fits the brioche perfectly. Sriracha fries are incredibly crunchy and addicting!&quot;
+              &quot;The Crispy Chicken Lollipop is a masterpiece of spice blending. Perfectly crunchy and served piping hot. The Potato Tornado is incredibly crunchy and addicting!&quot;
             </p>
             <div className={styles.reviewer}>
               <div className={styles.reviewerAvatar}>VK</div>
@@ -206,7 +206,7 @@ export default function Home() {
               ))}
             </div>
             <p className={styles.reviewQuote}>
-              &quot;Don&apos;t leave without ordering the Baked Saffron Sandesh Cheesecake. Mixing cardamom and local chhena into a rich New York style dessert is genius. 10/10!&quot;
+              &quot;Don&apos;t leave without ordering the Sunday Special Alukatta. The mix of spicy, tangy tamarind, soft potatoes, and chickpea mash is genius. 10/10!&quot;
             </p>
             <div className={styles.reviewer}>
               <div className={styles.reviewerAvatar}>SS</div>
@@ -224,7 +224,7 @@ export default function Home() {
         <div className={styles.ctaBanner}>
           <h2 className={styles.ctaTitle}>Hungry for Heritage?</h2>
           <p className={styles.ctaText}>
-            Browse our full fusion menu, customize your spice levels, and order your fresh roll or wok noodles today.
+            Browse our full street menu, customize your spice levels, and order your fresh chowmein or crispy lollipop today.
           </p>
           <Link href="/menu" className={`${styles.ctaBtn} btn-primary`}>
             Explore Full Menu

@@ -6,7 +6,7 @@ import { MenuCard } from "../../components/MenuCard";
 import { ItemModal } from "../../components/ItemModal";
 import styles from "../../styles/Menu.module.css";
 
-type CategoryFilter = "all" | "rolls" | "burgers" | "chinese" | "drinks";
+type CategoryFilter = "all" | "chowmein" | "fried-rice" | "starters" | "special";
 
 export default function Menu() {
   const [activeCategory, setActiveCategory] = useState<CategoryFilter>("all");
@@ -16,10 +16,10 @@ export default function Menu() {
 
   const categories: { label: string; value: CategoryFilter }[] = [
     { label: "All Items", value: "all" },
-    { label: "Kathi Rolls", value: "rolls" },
-    { label: "Burgers & Sides", value: "burgers" },
-    { label: "Tangra Chinese", value: "chinese" },
-    { label: "Sweets & Mojitos", value: "drinks" }
+    { label: "Chowmein", value: "chowmein" },
+    { label: "Fried Rice", value: "fried-rice" },
+    { label: "Starters", value: "starters" },
+    { label: "Special Item", value: "special" }
   ];
 
   // Memoize filtered items for speed
@@ -49,7 +49,7 @@ export default function Menu() {
       <div className={styles.intro}>
         <h1>Our Specialties</h1>
         <p>
-          Crafted from heritage family recipes, using authentic tandoor spices, hand-layered flatbreads, and aromatic fresh herbs.
+          Crafted from heritage family recipes, using authentic woks, traditional marinades, and fresh ingredients.
         </p>
       </div>
 
@@ -71,7 +71,7 @@ export default function Menu() {
           </svg>
           <input
             type="search"
-            placeholder="Search for Kathi rolls, spicy noodles, burgers..."
+            placeholder="Search for Chowmein, crispy starters, fried rice..."
             className={styles.searchInput}
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}

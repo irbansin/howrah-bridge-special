@@ -27,8 +27,8 @@ export const Footer: React.FC = () => {
         <div className={styles.brandColumn}>
           <h3>Kolkata-Howrah Bridge Special</h3>
           <p>
-            Bringing the rich street-food heritage of Kolkata to a modern fusion dining experience.
-            Savor Kathi Rolls, Gourmet Burgers, and authentic Tangra Chinese.
+            Bringing the rich street-food heritage of Kolkata to a modern dining experience.
+            Savor authentic Chowmein, flavorful Fried Rice, and sizzling crispy Starters.
           </p>
           <div className={styles.socials}>
             <a href="#" className={styles.socialLink} aria-label="Facebook">
