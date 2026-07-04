@@ -1,7 +1,9 @@
-/* Global Design System for Howrah Bridge Special */
+/* Global Design System for Kolkata-Howrah Bridge Special */
 
 /* Reset & Base Rules */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -16,26 +18,28 @@
   --surface-glass: rgba(17, 17, 22, 0.75);
   --border-color: rgba(255, 255, 255, 0.08);
   --border-color-hover: rgba(255, 255, 255, 0.15);
-  
-  --primary-gold: #d97706; /* Glowing bridge golden amber */
+
+  --primary-gold: #d97706;
+  /* Glowing bridge golden amber */
   --primary-gold-rgb: 217, 119, 6;
   --primary-gold-light: #fbbf24;
   --primary-gold-dark: #b45309;
-  
-  --secondary-mint: #10b981; /* Fresh cilantro mint */
+
+  --secondary-mint: #10b981;
+  /* Fresh cilantro mint */
   --secondary-mint-rgb: 16, 185, 129;
   --secondary-mint-light: #34d399;
-  
+
   --text-primary: #f8fafc;
   --text-secondary: #94a3b8;
   --text-muted: #64748b;
   --accent-red: #ef4444;
-  
+
   /* Fonts will be injected as CSS variables by Next.js layout */
   --font-body: var(--font-inter, 'Inter', sans-serif);
   --font-display: var(--font-outfit, 'Outfit', sans-serif);
   --font-serif: var(--font-playfair, 'Playfair Display', serif);
-  
+
   /* Layout */
   --header-height: 80px;
   --header-height-shrink: 64px;
@@ -44,14 +48,14 @@
   --border-radius-md: 16px;
   --border-radius-lg: 24px;
   --border-radius-round: 50%;
-  
+
   /* Shadow */
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.5);
   --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.6);
   --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.8);
   --shadow-gold: 0 0 20px rgba(217, 119, 6, 0.25);
   --shadow-gold-heavy: 0 0 35px rgba(217, 119, 6, 0.4);
-  
+
   /* Transitions */
   --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   --transition-normal: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -103,7 +107,8 @@ body {
 }
 
 /* Button & interactive components design system */
-button, .btn {
+button,
+.btn {
   font-family: var(--font-display);
   cursor: pointer;
   border: none;
@@ -188,6 +193,7 @@ button, .btn {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -195,8 +201,13 @@ button, .btn {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes scaleUp {
@@ -204,6 +215,7 @@ button, .btn {
     opacity: 0;
     transform: scale(0.95);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -214,6 +226,7 @@ button, .btn {
   from {
     transform: translateX(100%);
   }
+
   to {
     transform: translateX(0);
   }
@@ -228,7 +241,12 @@ button, .btn {
 }
 
 /* Typography styles */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-display);
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -250,4 +268,60 @@ h1, h2, h3, h4, h5, h6 {
 .scroll-snap-item {
   scroll-snap-align: start;
   flex-shrink: 0;
+}
+
+/* Shimmer skeleton animation */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.02) 25%, rgba(255, 255, 255, 0.07) 50%, rgba(255, 255, 255, 0.02) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite linear;
+}
+
+/* WhatsApp Floating Action Button Styling */
+.whatsapp-float-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #25d366;
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+  z-index: 999;
+  transition: all var(--transition-fast);
+}
+
+.whatsapp-float-btn:hover {
+  transform: scale(1.1) rotate(10deg);
+  background-color: #20ba5a;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+/* Pulse effect */
+.whatsapp-float-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: inherit;
+  z-index: -1;
+  opacity: 0.5;
+  animation: waPulse 2s infinite;
+}
+
+@keyframes waPulse {
+  0% { transform: scale(1); opacity: 0.5; }
+  100% { transform: scale(1.4); opacity: 0; }
 }

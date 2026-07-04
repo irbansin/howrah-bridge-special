@@ -18,7 +18,7 @@ export const CartDrawer: React.FC = () => {
   } = useCart();
 
   const dialogRef = useRef<HTMLDialogElement>(null);
-  
+
   // Checkout simulation states
   const [isPlacingOrder, setIsPlacingOrder] = useState(false);
   const [orderPlaced, setOrderPlaced] = useState(false);
@@ -40,7 +40,7 @@ export const CartDrawer: React.FC = () => {
         document.body.style.overflow = "";
       }
     }
-    
+
     return () => {
       document.body.style.overflow = "";
     };
@@ -148,39 +148,35 @@ export const CartDrawer: React.FC = () => {
             </div>
             <h4 className={styles.successTitle}>Order Placed!</h4>
             <p className={styles.successText}>
-              Your order from Howrah Bridge Special has been received. Our chefs are preparing your hot meal.
+              Your order from Kolkata-Howrah Bridge Special has been received. Our chefs are preparing your hot meal.
             </p>
 
             {/* Simulated Live Order Tracker */}
             <div className={styles.orderTimeline}>
               <div
-                className={`${styles.timelineNode} ${
-                  timelineStep > 0 ? styles.nodeCompleted : timelineStep === 0 ? styles.nodeActive : ""
-                }`}
+                className={`${styles.timelineNode} ${timelineStep > 0 ? styles.nodeCompleted : timelineStep === 0 ? styles.nodeActive : ""
+                  }`}
               >
                 <span className={styles.nodeTitle}>Order Confirmed</span>
                 <span className={styles.nodeDesc}>We have received your order</span>
               </div>
               <div
-                className={`${styles.timelineNode} ${
-                  timelineStep > 1 ? styles.nodeCompleted : timelineStep === 1 ? styles.nodeActive : ""
-                }`}
+                className={`${styles.timelineNode} ${timelineStep > 1 ? styles.nodeCompleted : timelineStep === 1 ? styles.nodeActive : ""
+                  }`}
               >
                 <span className={styles.nodeTitle}>Preparing Feast</span>
                 <span className={styles.nodeDesc}>Our tandoor chefs are rolling parathas</span>
               </div>
               <div
-                className={`${styles.timelineNode} ${
-                  timelineStep > 2 ? styles.nodeCompleted : timelineStep === 2 ? styles.nodeActive : ""
-                }`}
+                className={`${styles.timelineNode} ${timelineStep > 2 ? styles.nodeCompleted : timelineStep === 2 ? styles.nodeActive : ""
+                  }`}
               >
                 <span className={styles.nodeTitle}>Out for Delivery</span>
                 <span className={styles.nodeDesc}>A hot meal is heading to your bridge</span>
               </div>
               <div
-                className={`${styles.timelineNode} ${
-                  timelineStep > 3 ? styles.nodeCompleted : timelineStep === 3 ? styles.nodeActive : ""
-                }`}
+                className={`${styles.timelineNode} ${timelineStep > 3 ? styles.nodeCompleted : timelineStep === 3 ? styles.nodeActive : ""
+                  }`}
               >
                 <span className={styles.nodeTitle}>Delivered</span>
                 <span className={styles.nodeDesc}>Enjoy your street food specialties!</span>
@@ -230,7 +226,7 @@ export const CartDrawer: React.FC = () => {
                   <div className={styles.itemDetails}>
                     <div>
                       <h4 className={styles.itemTitle}>{item.name}</h4>
-                      
+
                       {/* Selected Customizations */}
                       {(item.spiceLevel || (item.extras && item.extras.length > 0)) && (
                         <div className={styles.customizationDetails}>

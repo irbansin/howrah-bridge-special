@@ -34,7 +34,7 @@ export default function Home() {
         <div className={styles.heroBackground}>
           <Image
             src="/images/hero.png"
-            alt="Delicious Kolkata rolls and burgers under the glowing Howrah Bridge"
+            alt="Delicious Kolkata rolls and burgers under the glowing Kolkata-Howrah Bridge"
             fill
             sizes="100vw"
             priority // Next.js triggers high fetch priority and preloading
@@ -49,11 +49,11 @@ export default function Home() {
             </svg>
             <span>Kolkata Street-Food & Fusion Classics</span>
           </div>
-          
+
           <h1 className={styles.heroTitle}>
             Where Heritage Meets <span>Fast Food</span>
           </h1>
-          
+
           <p className={styles.heroText}>
             Experience a culinary bridge. Authentically layered Kolkata Kathi rolls and Tangra street wok noodles fused with gourmet spiced burgers and signature lime coolers.
           </p>

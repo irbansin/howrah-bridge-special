@@ -15,7 +15,7 @@ interface ItemModalProps {
 export const ItemModal: React.FC<ItemModalProps> = ({ item, isOpen, onClose }) => {
   const { addItem } = useCart();
   const dialogRef = useRef<HTMLDialogElement>(null);
-  
+
   // Customization States
   const [selectedSpice, setSelectedSpice] = useState<string>("");
   const [selectedExtras, setSelectedExtras] = useState<{ name: string; price: number }[]>([]);
@@ -33,7 +33,7 @@ export const ItemModal: React.FC<ItemModalProps> = ({ item, isOpen, onClose }) =
         setSelectedExtras([]);
         setQuantity(1);
       }
-      
+
       // Open modal natively
       if (!dialog.open) {
         dialog.showModal();
@@ -46,7 +46,7 @@ export const ItemModal: React.FC<ItemModalProps> = ({ item, isOpen, onClose }) =
         document.body.style.overflow = "";
       }
     }
-    
+
     return () => {
       document.body.style.overflow = "";
     };
@@ -216,9 +216,8 @@ export const ItemModal: React.FC<ItemModalProps> = ({ item, isOpen, onClose }) =
           </div>
         )}
 
-        {/* Modal Action Footer */}
+        {/* Modal Action Footer - Commented Out
         <div className={styles.modalFooter}>
-          {/* Quantity Selector */}
           <div className={styles.quantitySelector}>
             <button
               type="button"
@@ -239,12 +238,71 @@ export const ItemModal: React.FC<ItemModalProps> = ({ item, isOpen, onClose }) =
             </button>
           </div>
 
-          {/* Add to Cart CTA */}
           <button type="button" className={`${styles.submitBtn} btn-primary`} onClick={handleAddToCart}>
             <span>Add to Cart</span>
             <span>&bull;</span>
             <span>₹{totalPrice}</span>
           </button>
+        </div>
+        */}
+
+        {/* Modal Footer with Close and WhatsApp Order Buttons */}
+        <div className={styles.modalFooter} style={{ display: "flex", flexDirection: "column", gap: "16px", width: "100%", marginTop: "20px" }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", width: "100%" }}>
+            {/* Quantity Selector */}
+            <div className={styles.quantitySelector}>
+              <button
+                type="button"
+                className={styles.qtyBtn}
+                onClick={() => handleQuantityChange(-1)}
+                aria-label="Decrease quantity"
+              >
+                &minus;
+              </button>
+              <span className={styles.qtyValue}>{quantity}</span>
+              <button
+                type="button"
+                className={styles.qtyBtn}
+                onClick={() => handleQuantityChange(1)}
+                aria-label="Increase quantity"
+              >
+                &#43;
+              </button>
+            </div>
+
+            <div style={{ fontSize: "1.25rem", fontWeight: "700", color: "var(--primary-gold)", fontFamily: "var(--font-serif)" }}>
+              Total: ₹{totalPrice}
+            </div>
+          </div>
+
+          <div style={{ display: "flex", gap: "12px", width: "100%" }}>
+            <button type="button" className="btn-secondary" style={{ flex: 1, justifyContent: "center" }} onClick={onClose}>
+              Close
+            </button>
+
+            <a
+              href={`https://wa.me/918759073055?text=${encodeURIComponent(
+                `Hi! I would like to order:\n\n*${item.name}* (Qty: ${quantity})\n` +
+                (item.customizable && selectedSpice ? `- Spice Level: ${selectedSpice}\n` : "") +
+                (selectedExtras.length > 0 ? `- Extras: ${selectedExtras.map((e) => e.name).join(", ")}\n` : "") +
+                `- Total Price: ₹${totalPrice}\n\nPlease confirm my order!`
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
+              style={{
+                flex: 2,
+                justifyContent: "center",
+                background: "linear-gradient(135deg, #25d366, #128c7e)",
+                boxShadow: "0 4px 15px rgba(37, 211, 102, 0.25)"
+              }}
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style={{ marginRight: 6 }}>
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.262 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.73-1.45L0 24zm6.59-4.846l.395.234c1.61.957 3.705 1.463 5.85 1.464 5.544 0 10.057-4.515 10.06-10.06.002-2.686-1.037-5.21-2.93-7.104C18.13 1.796 15.602.75 12.916.75 7.37.75 2.859 5.265 2.856 10.81c-.001 2.054.502 4.062 1.464 5.69l.257.435-1.01 3.685 3.774-.989zm11.306-6.425c-.29-.145-1.716-.847-1.98-.942-.266-.096-.459-.145-.653.146-.194.29-.75.942-.919 1.135-.169.194-.338.217-.628.072-.29-.145-1.226-.452-2.336-1.442-.864-.77-1.447-1.722-1.617-2.012-.17-.29-.018-.447.127-.59.13-.13.29-.339.435-.508.145-.169.193-.29.29-.483.097-.193.048-.362-.024-.507-.072-.145-.653-1.57-.893-2.15-.233-.56-.47-.483-.653-.492-.169-.009-.362-.01-.555-.01-.193 0-.507.072-.773.362-.266.29-1.014.99-1.014 2.415 0 1.425 1.038 2.802 1.182 2.995.145.193 2.043 3.12 4.949 4.373.692.298 1.233.477 1.655.61.695.22 1.33.19 1.83.115.558-.08 1.716-.7 1.96-1.374.246-.676.246-1.256.173-1.375-.072-.119-.266-.193-.556-.339z" />
+              </svg>
+              <span>Order on WhatsApp</span>
+            </a>
+          </div>
         </div>
       </div>
     </dialog>

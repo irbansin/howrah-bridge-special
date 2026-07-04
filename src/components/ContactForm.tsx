@@ -54,7 +54,7 @@ export const ContactForm: React.FC = () => {
         </div>
         <h2>Message Sent!</h2>
         <p>
-          Thank you for reaching out to Howrah Bridge Special. We have received your query and our team will get back to you shortly.
+          Thank you for reaching out to Kolkata-Howrah Bridge Special. We have received your query and our team will get back to you shortly.
         </p>
         <button className="btn-primary" onClick={handleReset}>
           Send Another Message
@@ -67,7 +67,7 @@ export const ContactForm: React.FC = () => {
     <div className={`${styles.formContainer} glass-panel`}>
       <h2>Send us a Message</h2>
       <p className={styles.formSub}>Have a question about our menu, catering, or reservations? Write to us.</p>
-      
+
       <form className={styles.form} onSubmit={handleSubmit}>
         <div className={styles.formRow}>
           {/* Name Field */}
@@ -111,7 +111,7 @@ export const ContactForm: React.FC = () => {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              placeholder="e.g. +91 98765 43210"
+              placeholder="e.g. +91 87590 73055"
               className={styles.input}
               pattern="^[+]?[0-9\s\-()]{10,15}$"
               title="Please enter a valid phone number"

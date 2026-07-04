@@ -18,10 +18,10 @@ export default function About() {
         <div className={styles.storyContent}>
           <h2>A Bridge Over Flavors</h2>
           <p>
-            Founded in 2024 by two childhood friends from North Kolkata, <span>Howrah Bridge Special</span> was born out of a simple longing: to find an authentic, layered Kathi roll that carried the real charcoal smoke and tang of the street side.
+            Founded in 2024 by two childhood friends from North Kolkata, <span>Kolkata-Howrah Bridge Special</span> was born out of a simple longing: to find an authentic, layered Kathi roll that carried the real charcoal smoke and tang of the street side.
           </p>
           <p>
-            Named after the iconic cantilever Howrah Bridge that spans the Hooghly River, our joint serves as a culinary link. We connect traditional street griddling, roaring Indo-Chinese wok techniques, and clay tandoor bakes with modern brioche burger formats and crisp fries.
+            Named after the iconic cantilever Kolkata-Howrah Bridge that spans the Hooghly River, our joint serves as a culinary link. We connect traditional street griddling, roaring Indo-Chinese wok techniques, and clay tandoor bakes with modern brioche burger formats and crisp fries.
           </p>
           <p>
             We don&apos;t compromise on heritage. Our parathas are stretched on heavy iron tawas, our spice blends are hand-pounded weekly, and our Gondhoraj limes are shipped straight from Bengal to give that fragrant citrus punch you won&apos;t find anywhere else.
@@ -32,7 +32,7 @@ export default function About() {
         <div className={styles.storyVisual}>
           <Image
             src="/images/hero.png"
-            alt="Inside Howrah Bridge Special Kitchen"
+            alt="Inside Kolkata-Howrah Bridge Special Kitchen"
             fill
             sizes="(max-width: 1024px) 100vw, 50vw"
             loading="lazy"
@@ -119,7 +119,7 @@ export default function About() {
               </svg>
             </div>
             <div className={styles.teamInfo}>
-              <h3 className={styles.teamName}>Amit Ray</h3>
+              <h3 className={styles.teamName}>Arindam Sinha</h3>
               <span className={styles.teamRole}>Co-Founder & Wok Master</span>
               <p className={styles.teamDesc}>
                 Trained in Kolkata&apos;s Tangra Chinatown district, specializing in roaring wok mechanics and dark-soy street Hakka noodle seasoning.

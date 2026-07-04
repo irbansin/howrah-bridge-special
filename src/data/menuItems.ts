@@ -32,7 +32,7 @@ export const menuItems: MenuItem[] = [
   },
   {
     id: "chicken-roll",
-    name: "Howrah Double Chicken Roll",
+    name: "Kolkata-Howrah Double Chicken Roll",
     description: "Flaky paratha stuffed with double portion of succulent tandoori chicken tikka chunks, charred bell peppers, sliced red onions, and fresh cilantro-mint chutney.",
     price: 180,
     category: "rolls",

@@ -4,6 +4,7 @@ import { CartProvider } from "../context/CartContext";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { CartDrawer } from "../components/CartDrawer";
+import { WhatsAppButton } from "../components/WhatsAppButton";
 import "./globals.css";
 
 const inter = Inter({
@@ -25,9 +26,9 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Howrah Bridge Special | Kolkata Street Food & Fusion Fast Food",
-  description: "Experience the unique street-food heritage of Kolkata combined with modern fusion fast food at Howrah Bridge Special. Kathi Rolls, Gourmet Burgers, and Indo-Chinese stir-fries.",
-  keywords: "Kolkata street food, Kathi rolls, Howrah Bridge Special, fusion burgers, Tangra chinese, fast food Kolkata",
+  title: "Kolkata-Howrah Bridge Special | Kolkata Street Food & Fusion Fast Food",
+  description: "Experience the unique street-food heritage of Kolkata combined with modern fusion fast food at Kolkata-Howrah Bridge Special. Kathi Rolls, Gourmet Burgers, and Indo-Chinese stir-fries.",
+  keywords: "Kolkata street food, Kathi rolls, Kolkata-Howrah Bridge Special, fusion burgers, Tangra chinese, fast food Kolkata",
 };
 
 export default function RootLayout({
@@ -48,6 +49,7 @@ export default function RootLayout({
           </div>
           <Footer />
           <CartDrawer />
+          <WhatsAppButton />
         </CartProvider>
       </body>
     </html>

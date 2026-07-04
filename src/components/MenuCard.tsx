@@ -74,7 +74,7 @@ export const MenuCard: React.FC<MenuCardProps> = ({ item, onSelect }) => {
         
         <p className={styles.cardDesc}>{item.description}</p>
         
-        {/* Call to action */}
+        {/* Call to action - Commented Out
         <div className={styles.cardFooter}>
           <button
             type="button"
@@ -94,6 +94,7 @@ export const MenuCard: React.FC<MenuCardProps> = ({ item, onSelect }) => {
             )}
           </button>
         </div>
+        */}
       </div>
     </article>
   );

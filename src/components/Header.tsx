@@ -21,7 +21,7 @@ export const Header: React.FC = () => {
         setIsShrunk(false);
       }
     };
-    
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -43,7 +43,7 @@ export const Header: React.FC = () => {
       <div className={`${styles.navContainer} container`}>
         {/* Brand Logo */}
         <Link href="/" className={styles.logo}>
-          Howrah<span className={styles.logoAccent}>Bridge</span>Special
+          Kolkata-Howrah<span className={styles.logoAccent}>Bridge</span>Special
         </Link>
 
         {/* Navigation Links */}
@@ -62,15 +62,15 @@ export const Header: React.FC = () => {
           </ul>
         </nav>
 
-        {/* Action buttons (Cart, Hamburger) */}
+        {/* Action buttons (Cart - Commented Out, Hamburger) */}
         <div className={styles.actions}>
+          {/* 
           <button
             className={styles.cartBtn}
             onClick={() => setIsCartOpen(true)}
             aria-label="Open shopping bag"
             id="header-cart-button"
           >
-            {/* SVG Cart Icon */}
             <svg
               width="20"
               height="20"
@@ -87,6 +87,7 @@ export const Header: React.FC = () => {
             </svg>
             {cartCount > 0 && <span className={styles.cartBadge}>{cartCount}</span>}
           </button>
+          */}
 
           <button
             className={`${styles.hamburger} ${isMobileMenuOpen ? styles.open : ""}`}

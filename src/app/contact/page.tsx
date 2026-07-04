@@ -47,8 +47,7 @@ export default function Contact() {
               </div>
               <div className={styles.cardDetails}>
                 <h3>Call for Orders & Bookings</h3>
-                <p>+91 33 2262 0000</p>
-                <p>+91 98765 01234</p>
+                <p>+91 87590 73055</p>
               </div>
             </div>
 
@@ -62,7 +61,7 @@ export default function Contact() {
               </div>
               <div className={styles.cardDetails}>
                 <h3>Our Location</h3>
-                <p>Howrah Bridge Approach Road, Strand Road,</p>
+                <p>Kolkata-Howrah Bridge Approach Road, Strand Road,</p>
                 <p>Kolkata, West Bengal 700001</p>
               </div>
             </div>
@@ -77,8 +76,8 @@ export default function Contact() {
               </div>
               <div className={styles.cardDetails}>
                 <h3>Email Support</h3>
-                <p>orders@howrahbridgespecial.com</p>
-                <p>info@howrahbridgespecial.com</p>
+                <p>orders@kolkata-howrahbridgespecial.com</p>
+                <p>info@kolkata-howrahbridgespecial.com</p>
               </div>
             </div>
           </div>
