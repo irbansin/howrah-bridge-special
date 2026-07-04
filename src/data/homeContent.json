@@ -1,0 +1,70 @@
+{
+  "hero": {
+    "badgeText": "Kolkata Street-Food & Fusion Classics",
+    "titlePrefix": "Where Heritage Meets ",
+    "titleHighlighted": "Fast Food",
+    "description": "Experience the vibrant street flavors of Kolkata. Savor authentic wok-tossed Chowmein, fragrant Fried Rice, sizzling hot Starters, and our legendary Sunday special Alukatta."
+  },
+  "benefits": {
+    "sectionBadge": "Our Signature Methods",
+    "sectionTitle": "The Bridge Special Secret",
+    "sectionSubtitle": "We construct every meal with high-quality ingredients using traditional charcoal and wok techniques.",
+    "items": [
+      {
+        "id": "wok-heritage",
+        "title": "Tangra Wok Heritage",
+        "text": "Our noodles and fried rice are wok-tossed at high temperatures to capture the perfect wok-hei flavor."
+      },
+      {
+        "id": "crispy-starters",
+        "title": "Crispy Starters",
+        "text": "Succulent chicken lollipops and coated cauliflower griddled and fried to maximum crispiness."
+      },
+      {
+        "id": "sunday-special",
+        "title": "Sunday Special",
+        "text": "A limited-time Sunday treat: the legendary Alukatta, crafted from secret ancestral spices."
+      },
+      {
+        "id": "street-spices",
+        "title": "Pure Street Spices",
+        "text": "Fresh ginger, garlic, green chillies, and custom roasted ground spices blended in-house daily."
+      }
+    ]
+  },
+  "featured": {
+    "sectionBadge": "Popular Orders",
+    "sectionTitle": "Featured Culinary Delights",
+    "sectionSubtitle": "Customer-voted crowd favorites that highlight the unique tastes of our fusion kitchen.",
+    "featuredIds": ["chicken-chowmein", "crispy-chicken-lollipop", "alukatta"]
+  },
+  "reviewsSection": {
+    "sectionBadge": "Reviews",
+    "sectionTitle": "What Foodies Say",
+    "sectionSubtitle": "Honest feedback from local food critics and customers alike.",
+    "reviews": [
+      {
+        "quote": "The chicken Chowmein here is a revelation. Wok-tossed beautifully, Indo-Chinese spices are spot-on. Tastes exactly like the iconic street spots in Tangra, Kolkata!",
+        "avatar": "AM",
+        "author": "Ananya Mukherjee",
+        "role": "Food Blogger"
+      },
+      {
+        "quote": "The Crispy Chicken Lollipop is a masterpiece of spice blending. Perfectly crunchy and served piping hot. The Potato Tornado is incredibly crunchy and addicting!",
+        "avatar": "VK",
+        "author": "Vikram Kapoor",
+        "role": "Google Reviewer"
+      },
+      {
+        "quote": "Don't leave without ordering the Sunday Special Alukatta. The mix of spicy, tangy tamarind, soft potatoes, and chickpea mash is genius. 10/10!",
+        "avatar": "SS",
+        "author": "Suhail Sen",
+        "role": "Culinary Critic"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Hungry for Heritage?",
+    "text": "Browse our full street menu, customize your spice levels, and order your fresh chowmein or crispy lollipop today."
+  }
+}

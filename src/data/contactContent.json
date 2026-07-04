@@ -1,0 +1,47 @@
+{
+  "titleArea": {
+    "title": "Get in Touch",
+    "description": "We would love to hear from you! Drop by, call us to place a quick order, or send us a message below."
+  },
+  "hoursSection": {
+    "title": "Opening Hours",
+    "description": "Our tandoor fires are burning and woks are screaming during these hours:",
+    "rows": [
+      {
+        "days": "Monday \u2013 Thursday",
+        "time": "12:00 PM \u2013 11:00 PM"
+      },
+      {
+        "days": "Friday \u2013 Saturday",
+        "time": "12:00 PM \u2013 12:00 AM"
+      },
+      {
+        "days": "Sunday",
+        "time": "01:00 PM \u2013 10:00 PM"
+      }
+    ]
+  },
+  "cards": [
+    {
+      "type": "phone",
+      "title": "Call for Orders & Bookings",
+      "values": ["+91 87590 73055"]
+    },
+    {
+      "type": "address",
+      "title": "Our Location",
+      "values": [
+        "Kolkata-Howrah Bridge Approach Road, Strand Road,",
+        "Kolkata, West Bengal 700001"
+      ]
+    },
+    {
+      "type": "support",
+      "title": "Email Support",
+      "values": [
+        "orders@kolkata-howrahbridgespecial.com",
+        "info@kolkata-howrahbridgespecial.com"
+      ]
+    }
+  ]
+}

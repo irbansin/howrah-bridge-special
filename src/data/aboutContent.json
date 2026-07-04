@@ -1,0 +1,60 @@
+{
+  "header": {
+    "title": "Our Story",
+    "description": "Bridging the authentic, raw, and vibrant flavors of Kolkata street lanes with high-quality, modern fast-food dining."
+  },
+  "story": {
+    "title": "A Bridge Over Flavors",
+    "paragraphs": [
+      "Founded in 2024 by two childhood friends from North Kolkata, Kolkata-Howrah Bridge Special was born out of a simple longing: to find authentic Kolkata street food that carried the real wok smoke and tang of the street side.",
+      "Named after the iconic cantilever Kolkata-Howrah Bridge that spans the Hooghly River, our joint serves as a culinary link. We connect traditional street griddling, roaring Indo-Chinese wok techniques, and starter frying to create high-quality comfort food.",
+      "We don't compromise on heritage. Our spice blends are hand-pounded weekly, and our ingredients are selected to give that street-side punch you won't find anywhere else."
+    ]
+  },
+  "quote": {
+    "text": "Food in Kolkata is not just sustenance; it is a conversation, an emotion, and a legacy. We wanted to build a bridge that carries that legacy forward.",
+    "author": "Joydeep & Amit, Founders"
+  },
+  "pillarsSection": {
+    "title": "Our Three Pillars",
+    "subtitle": "What makes our kitchen distinct and our menu special.",
+    "items": [
+      {
+        "number": "01",
+        "title": "No Shortcuts",
+        "text": "We never use pre-packaged doughs or liquid smoke. Everything from our green chutneys to our paneer and chicken marinates is prepared from scratch daily in our kitchen."
+      },
+      {
+        "number": "02",
+        "title": "Tangra Chinatown Woks",
+        "text": "Our street-style noodles and fried rice are tossed at blistering temperatures in heavy carbon-steel woks for that signature smoky wok-hei flavor."
+      },
+      {
+        "number": "03",
+        "title": "Sunday Specialty",
+        "text": "We are dedicated to bringing back lost street recipes. Our Sunday special Alukatta is prepared fresh on Sunday evenings using authentic ingredients."
+      }
+    ]
+  },
+  "teamSection": {
+    "title": "Our Culinary Masters",
+    "subtitle": "Meet the skilled hands and experienced palates behind our popular specialties.",
+    "members": [
+      {
+        "name": "Chef Biswajit Das",
+        "role": "Head Chef & Starter Specialist",
+        "description": "Over 18 years of experience griddling and frying street-style starters in Kolkata's historic Park Street cabinets."
+      },
+      {
+        "name": "Arindam Sinha",
+        "role": "Co-Founder & Wok Master",
+        "description": "Trained in Kolkata's Tangra Chinatown district, specializing in roaring wok mechanics and dark-soy street Hakka noodle seasoning."
+      },
+      {
+        "name": "Joydeep Dey",
+        "role": "Co-Founder & Product Innovator",
+        "description": "Oversees sourcing fresh mint, street spices, and potatoes. Architect of the Sunday Special Alukatta."
+      }
+    ]
+  }
+}
